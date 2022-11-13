@@ -156,7 +156,7 @@ code {
   padding: 2.4rem;
   color: var(--color-white);
   background-color: var(--color-bg);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 2.4rem;
   border-radius: 0.8rem;
 }
@@ -172,6 +172,25 @@ code {
   background-color: var(--color-accent3);
   margin-bottom: 1rem;
   color: black;
+}
+
+@media (min-width: 768px) {
+  .dialogue-summary {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    padding: 4.8rem 5.6rem;
+  }
+  .dialogue-main {
+    padding: 5.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dialogue {
+    margin: auto;
+    max-width: 968px;
+    padding: 0 8rem 4rem;
+  }
 }
 /* End Overlay */
 /* App-Container */
@@ -414,6 +433,7 @@ code {
   background-color: transparent;
   margin-bottom: 3.2rem;
   border: 0.1rem solid transparent;
+  width: 100%;
 }
 
 .survey-question:hover {
@@ -467,11 +487,23 @@ code {
     font-size: 3.2rem;
     line-height: 4.8rem;
   }
+
+  .survey-replies.active {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .survey-question-text {
     font-size: 4rem;
+  }
+
+  @media (min-width: 1444px) {
+    .survey-group {
+      margin: auto;
+      max-width: 1280px;
+    }
   }
 }
 

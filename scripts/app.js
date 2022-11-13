@@ -38,6 +38,9 @@ checkFirstQuestionAnswered();
 questionOneReplies.forEach((replies, idx) =>
   replies.addEventListener("click", function () {
     this.classList.add("active");
+    document
+      .querySelector("#question-two")
+      .scrollIntoView({ behavior: "smooth" });
     // checks for first two replies
     if (idx <= 1) {
       overlay.classList.add("active");

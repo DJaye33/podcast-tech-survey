@@ -39,7 +39,7 @@ questionOneReplies.forEach((replies, idx) =>
   replies.addEventListener("click", function () {
     this.classList.add("active");
     document
-      .querySelector("#question-two")
+      .querySelector("#snap-scroll")
       .scrollIntoView({ behavior: "smooth" });
     // checks for first two replies
     if (idx <= 1) {

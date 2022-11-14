@@ -8,6 +8,8 @@ const overlayOptionsHeading = document.querySelector(".dialogue-heading");
 const errorSpanFirst = document.querySelectorAll(".error")[0];
 const errorSpanSecond = document.querySelectorAll(".error")[1];
 const overlay = document.querySelector("#overlay");
+const dialogue = document.querySelector(".dialogue");
+const dialogueOneSmall = document.querySelector(".dialogue-one-small");
 
 // make first question active on load
 window.addEventListener("load", function () {
@@ -67,6 +69,7 @@ questionOneReplies.forEach((replies, idx) =>
 
 // one or multi
 let cameraOption;
+let budgetSize;
 
 const verifyCameraOption = () => {
   if (cameraOption === "one") {
@@ -105,6 +108,17 @@ questionTwoReplies.forEach((replies, idx) =>
     }
 
     console.log(cameraOption);
+  })
+);
+
+questionThreeReplies.forEach((reply, idx) =>
+  reply.addEventListener("click", function () {
+    if (cameraOption === "one" && idx === 0) {
+      dialogue.classList.add("inactive");
+      dialogueOneSmall.classList.add("active");
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
   })
 );
 

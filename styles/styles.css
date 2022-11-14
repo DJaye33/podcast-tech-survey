@@ -67,6 +67,10 @@ a {
   display: inline-block;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 p {
   font-size: 1.8rem;
   line-height: 2.9rem;
@@ -119,6 +123,10 @@ code {
   background-color: var(--color-white);
   border-radius: 0.8rem;
   overflow: scroll;
+}
+
+.dialogue.inactive {
+  display: none;
 }
 
 .dialogue::-webkit-scrollbar {
@@ -174,6 +182,59 @@ code {
   color: black;
 }
 
+.dialogue-one-small {
+  display: none;
+  width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  background-color: var(--color-white);
+  border-radius: 0.8rem;
+  overflow: scroll;
+  padding: 0 2.4rem;
+}
+
+.dialogue-one-small.inactive {
+  display: none;
+}
+
+.dialogue-one-small::-webkit-scrollbar {
+  display: none;
+}
+
+.dialogue-one-small {
+  overflow: -moz-scrollbars-none;
+}
+
+.dialogue-one-small {
+  -ms-overflow-style: none;
+}
+
+.dialogue-one-small.active {
+  display: block;
+}
+
+.one-small-recommendation {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  margin: 2.4rem 0;
+}
+
+.one-small-list-item {
+  padding: 2.4rem;
+  color: var(--color-white);
+  background-color: var(--color-bg);
+  font-size: 1.7rem;
+  margin-bottom: 2.4rem;
+  border-radius: 0.8rem;
+}
+
+.one-small-list-item a {
+  display: block;
+  margin-top: 1rem;
+  color: var(--color-accent1);
+}
+
+/* dialogue media queries */
 @media (min-width: 768px) {
   .dialogue-summary {
     font-size: 4rem;

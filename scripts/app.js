@@ -10,6 +10,8 @@ const errorSpanSecond = document.querySelectorAll(".error")[1];
 const overlay = document.querySelector("#overlay");
 const dialogue = document.querySelector(".dialogue");
 const dialogueOneSmall = document.querySelector(".dialogue-one-small");
+const dialogueOneMid = document.querySelector(".dialogue-one-mid");
+const dialogueOneLrg = document.querySelector(".dialogue-one-lrg");
 
 // make first question active on load
 window.addEventListener("load", function () {
@@ -116,6 +118,19 @@ questionThreeReplies.forEach((reply, idx) =>
     if (cameraOption === "one" && idx === 0) {
       dialogue.classList.add("inactive");
       dialogueOneSmall.classList.add("active");
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    } else if (cameraOption === "one" && idx === 1) {
+      dialogue.classList.add("inactive");
+      dialogueOneSmall.classList.add("inactive");
+      dialogueOneMid.classList.add("active");
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    } else if (cameraOption === "one" && idx === 2) {
+      dialogue.classList.add("inactive");
+      dialogueOneSmall.classList.add("inactive");
+      dialogueOneMid.classList.add("inactive");
+      dialogueOneLrg.classList.add("active");
       overlay.classList.add("active");
       document.body.style.overflow = "hidden";
     }

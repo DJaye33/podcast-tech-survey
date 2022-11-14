@@ -12,6 +12,9 @@ const dialogue = document.querySelector(".dialogue");
 const dialogueOneSmall = document.querySelector(".dialogue-one-small");
 const dialogueOneMid = document.querySelector(".dialogue-one-mid");
 const dialogueOneLrg = document.querySelector(".dialogue-one-lrg");
+const dialogueTwoSmall = document.querySelector(".dialogue-two-small");
+const dialogueTwoMid = document.querySelector(".dialogue-two-mid");
+const dialogueTwoLrg = document.querySelector(".dialogue-two-lrg");
 
 // make first question active on load
 window.addEventListener("load", function () {
@@ -76,7 +79,7 @@ let budgetSize;
 const verifyCameraOption = () => {
   if (cameraOption === "one") {
     questionThreeReplies[0].textContent = "$350 - $600";
-    questionThreeReplies[1].textContent = "$450 - $900";
+    questionThreeReplies[1].textContent = "$750 - $900";
     questionThreeReplies[2].textContent = "$2000 - $4000";
   } else {
     questionThreeReplies[0].textContent = "$400 - $700";
@@ -131,6 +134,33 @@ questionThreeReplies.forEach((reply, idx) =>
       dialogueOneSmall.classList.add("inactive");
       dialogueOneMid.classList.add("inactive");
       dialogueOneLrg.classList.add("active");
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    } else if (cameraOption === "multi" && idx === 0) {
+      dialogue.classList.add("inactive");
+      dialogueOneSmall.classList.add("inactive");
+      dialogueOneMid.classList.add("inactive");
+      dialogueOneLrg.classList.add("inactive");
+      dialogueTwoSmall.classList.add("active");
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    } else if (cameraOption === "multi" && idx === 1) {
+      dialogue.classList.add("inactive");
+      dialogueOneSmall.classList.add("inactive");
+      dialogueOneMid.classList.add("inactive");
+      dialogueOneLrg.classList.add("inactive");
+      dialogueTwoSmall.classList.add("inactive");
+      dialogueTwoMid.classList.add("active");
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    } else {
+      dialogue.classList.add("inactive");
+      dialogueOneSmall.classList.add("inactive");
+      dialogueOneMid.classList.add("inactive");
+      dialogueOneLrg.classList.add("inactive");
+      dialogueTwoSmall.classList.add("inactive");
+      dialogueTwoMid.classList.add("inactive");
+      dialogueTwoLrg.classList.add("active");
       overlay.classList.add("active");
       document.body.style.overflow = "hidden";
     }
